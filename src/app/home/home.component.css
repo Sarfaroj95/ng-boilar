@@ -1,0 +1,46 @@
+mat-toolbar {
+  height: 50px;
+}
+.pro-button {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.main {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  widows: 100%;
+}
+.sub-div {
+  width: 30%;
+  margin-top: 70px;
+}
+.example-form {
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+mat-card-title {
+  text-align: center;
+}
+mat-card-content {
+  padding: 10px;
+}
+p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .sub-div {
+    width: 90%;
+  }
+  .example-form {
+    width: 100%;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+}

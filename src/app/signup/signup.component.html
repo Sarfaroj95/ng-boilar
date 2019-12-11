@@ -1,0 +1,171 @@
+<div class="main">
+  <div class="sub-div">
+    <mat-card>
+      <mat-card-title>Sign Up</mat-card-title>
+      <img mat-card-image />
+      <mat-card-content>
+        <form [formGroup]="formRegister" action="#" class="example-form">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Enter your First Name"
+              formControlName="first_name"
+            />
+            <mat-error
+              *ngIf="
+                formRegister.controls['first_name'].invalid &&
+                (formRegister.controls['first_name'].dirty ||
+                  formRegister.controls['first_name'].touched)
+              "
+              class="text-danger"
+            >
+              <mat-error
+                *ngIf="formRegister.controls['first_name'].errors.required"
+                class="text-danger"
+              >
+                First Name is required.
+              </mat-error>
+              <mat-error
+                *ngIf="formRegister.controls['first_name'].errors.pattern"
+              >
+                Please enter a valid First Name
+              </mat-error>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Enter your Last Name"
+              formControlName="last_name"
+            />
+            <mat-error
+              *ngIf="
+                formRegister.controls['last_name'].invalid &&
+                (formRegister.controls['last_name'].dirty ||
+                  formRegister.controls['last_name'].touched)
+              "
+              class="text-danger"
+            >
+              <mat-error
+                *ngIf="formRegister.controls['last_name'].errors.required"
+                class="text-danger"
+              >
+                First Name is required.
+              </mat-error>
+              <mat-error
+                *ngIf="formRegister.controls['last_name'].errors.pattern"
+              >
+                Please enter a valid First Name
+              </mat-error>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+            <mat-error
+              *ngIf="
+                formRegister.controls['email'].invalid &&
+                (formRegister.controls['email'].dirty ||
+                  formRegister.controls['email'].touched)
+              "
+              class="text-danger"
+            >
+              <mat-error
+                *ngIf="formRegister.controls['email'].errors.required"
+                class="text-danger"
+              >
+                Email is required.
+              </mat-error>
+              <mat-error *ngIf="formRegister.controls['email'].errors.pattern">
+                Please enter a valid email
+              </mat-error>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              placeholder="Enter your password"
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <span
+              class="bnone"
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </span>
+            <mat-error
+              *ngIf="
+                formRegister.controls['password'].invalid &&
+                (formRegister.controls['password'].dirty ||
+                  formRegister.controls['password'].touched)
+              "
+              class="text-danger"
+            >
+              <mat-error
+                *ngIf="formRegister.controls['password'].errors.required"
+                class="text-danger"
+              >
+                Password is required.
+              </mat-error>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input
+              formControlName="conPassword"
+              matInput
+              placeholder="Confirm password"
+              type="password"
+              [errorStateMatcher]="matcher"
+            />
+            <span class="bnone" mat-icon-button matSuffix>
+              <mat-icon>lock_outline</mat-icon>
+            </span>
+            <mat-error
+              *ngIf="
+                formRegister.controls['conPassword'].invalid &&
+                (formRegister.controls['conPassword'].dirty ||
+                  formRegister.controls['conPassword'].touched)
+              "
+              class="text-danger"
+            >
+            </mat-error>
+            <mat-error *ngIf="formRegister.hasError('notSame')">
+              Passwords do not match
+            </mat-error>
+          </mat-form-field>
+
+          <button
+            mat-raised-button
+            (click)="SignUp('Success')"
+            class="signin"
+            [disabled]="!formRegister.valid"
+            color="primary"
+          >
+            Sign Up
+          </button>
+          <div class="footer">
+            <a
+              href=""
+              [routerLink]="['/signin']"
+              routerLinkActive="router-link-active"
+            >
+              Go back
+            </a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

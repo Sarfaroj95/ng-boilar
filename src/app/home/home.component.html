@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <button mat-button>Home</button>
+  <button (click)="logout()" class="pro-button" mat-button>
+    <mat-icon aria-hidden="false" aria-label="Example home icon"
+      >power_settings_new</mat-icon
+    >
+  </button>
+
+  <!-- <button class="pro-button" mat-button>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      [matMenuTriggerFor]="menu"
+      >drag_indicator</mat-icon
+    >
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >person_outline</mat-icon
+      >
+      Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >power_settings_new</mat-icon
+      >
+      Logout
+    </button>
+  </mat-menu> -->
+</mat-toolbar>
+<div class="main">
+  <div class="sub-div">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Profile</mat-card-title>
+        <div>
+          <p>Name: {{ name }}</p>
+          <p>Email: {{ email }}</p>
+        </div>
+        <button mat-raised-button class="btn btn-primary" color="primary">
+          Update
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
