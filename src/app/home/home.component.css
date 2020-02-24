@@ -1,46 +1,40 @@
-mat-toolbar {
-  height: 50px;
-}
-.pro-button {
-  position: absolute;
-  right: 0;
-  margin-right: 20px;
-}
-
-.main {
-  justify-content: center;
+.main-row {
   display: flex;
-  align-items: center;
-  widows: 100%;
-}
-.sub-div {
-  width: 30%;
-  margin-top: 70px;
-}
-.example-form {
   width: 100%;
+  margin: 2%;
 }
-.example-full-width {
-  width: 100%;
+.left-side {
+  width: 300px;
 }
-mat-card-title {
-  text-align: center;
+.right-side {
+  width: 500px;
+  padding-left: 100px;
 }
-mat-card-content {
-  padding: 10px;
+/* Now update */
+.top {
+  margin: 30px;
+  display: flex;
 }
-p {
-  font-size: 20px;
+.one {
+  width: 40%;
+}
+.two {
+  width: 50%;
+  padding-left: 30px;
 }
 
-@media only screen and (max-width: 500px) {
-  .sub-div {
-    width: 90%;
-  }
-  .example-form {
-    width: 100%;
-  }
-  .example-full-width {
-    width: 100%;
-  }
+/* Structure */
+.example-card {
+  width: 100%;
+}
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.dd {
+  margin: 5px;
 }

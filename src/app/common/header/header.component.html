@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <button [routerLink]="['./home']" mat-button>Home</button>
+  <button class="pro-button" mat-button>
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      [matMenuTriggerFor]="menu"
+      >menu</mat-icon
+    >
+  </button>
+  <mat-menu #menu="matMenu">
+    <button
+      [routerLink]="['./profile']"
+      routerLinkActive="router-link-active"
+      mat-menu-item
+    >
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >person_outline</mat-icon
+      >
+      Profile
+    </button>
+    <button (click)="logout()" mat-menu-item>
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >power_settings_new</mat-icon
+      >
+      Logout
+    </button>
+  </mat-menu>
+</mat-toolbar>

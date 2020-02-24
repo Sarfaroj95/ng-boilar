@@ -64,7 +64,7 @@ export class SignupComponent implements OnInit {
     console.log("data", val);
     this.auth.MainRegister(val).subscribe(
       result => {
-        console.log("resiter success");
+        console.log("resiter success", result);
 
         let action = "Success";
         let msgs = "Your register success";

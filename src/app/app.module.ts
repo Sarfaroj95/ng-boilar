@@ -17,6 +17,9 @@ import { HomeComponent } from "./home/home.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
+import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './common/header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { NotfoundComponent } from "./notfound/notfound.component";
     HomeComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ProfileComponent,
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
     HttpClientModule,

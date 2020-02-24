@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="sub-div">
+    <mat-card>
+      <mat-card-content>
+        <mat-card-title>Profile</mat-card-title>
+        <div>
+          <p>
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >person_outline</mat-icon
+            >
+            {{ Details.first_name }} {{ Details.last_name }}
+          </p>
+          <p>
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >mail_outline</mat-icon
+            >
+            {{ Details.email }}
+          </p>
+        </div>
+        <button mat-raised-button class="btn btn-primary" color="primary">
+          Update
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
