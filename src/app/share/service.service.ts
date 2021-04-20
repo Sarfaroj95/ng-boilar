@@ -7,7 +7,7 @@ import { environment } from "../../environments/environment";
   providedIn: "root"
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   private baseUrl = "https://boilar.herokuapp.com";
   private UserSignUrl = this.baseUrl + "/api/v1/user/login";
@@ -55,4 +55,5 @@ export class AuthService {
   deleteId() {
     return localStorage.removeItem("id");
   }
+
 }

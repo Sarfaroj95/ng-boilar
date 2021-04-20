@@ -66,6 +66,7 @@ export class SigninComponent implements OnInit {
       },
       error => {
         console.log("login failed");
+        console.log("iam new in this app");
         let msg = error.error;
         let action = " Error";
         let msgs = "Your email or password is wrong";
